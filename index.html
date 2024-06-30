@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="side col-lg-1 col-2 p-3">
+            <div class="side-bar">
+                <div class="logo d-flex"><img src="277497319_1674132936268618_3055440336966667089_n.jpg" alt="" class="rounded-circle logo-img"><p class="side-text p-3"></p></div>
+                <ul class="side-nav">
+                    <li class="active-nav dash"><i class="fa-solid fa-house px-xl-3 py-3 px-lg-2 px-3"></i><p class="side-text py-3">Dashboard</p></li>
+                    <li class="chart"><i class="fa-solid fa-check-to-slot px-xl-3 py-3 px-lg-2 px-3"></i><p class="side-text py-3">Voting</p></li>
+                    <li class="candidate"><i class="fa-solid fa-users px-xl-3 py-3 px-lg-2 px-3"></i><p class="side-text py-3">Candidates</p></li>
+                    <li class="result"><i class="fa-solid fa-square-poll-vertical px-xl-3 py-3 px-lg-2 px-3"></i><p class="side-text py-3">Results</p></li>
+                    
+                </ul>
+                <ul class="side-nav">
+                    <li class="log-out"><i class="fa-solid fa-arrow-right-from-bracket px-xl-3 py-3 px-lg-2 px-3"></i><p class="side-text py-3">Log Out</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-11 col-10 p-3 ms-auto home">
+            <header class="d-flex">
+                <div class="d-block">
+                    <p class="fs-4 my-2 page-title">Dashboard</p>
+                    <p class="fs-5 welcome"></p>
+                </div>
+                <p class="date py-2 px-4 bg-white m-0 rounded-3"></p>
+                <div class="menu-toogle bg-white rounded-3">
+                    <i class="fa-solid fa-bars menu-toogle-icon"></i>
+                </div>
+            </header>
+            <div class="first-display">
+                <div class="overview d-md-flex">
+                    <div class="col d-flex p-lg-3 p-2 mx-md-3 mt-md-5 mt-3">
+                        <div class="hexagon hex1">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="d-block ms-lg-4 ms-2">
+                            <p class="fs-lg-5 fs-6 m-0">No. of Candidates</p>
+                            <p>8</p>
+                        </div>
+                    </div>
+                    <div class="col d-flex p-lg-3 p-2 mx-md-3 mt-md-5 mt-3">
+                        <div class="hexagon hex2">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="d-block ms-lg-4 ms-2">
+                            <p class="fs-lg-5 fs-6 m-0">No. of Positions</p>
+                            <p>2</p>
+                        </div>
+                        
+                    </div>
+                    <div class="col d-flex p-lg-3 p-2 mx-md-3 mt-md-5 mt-3">
+                        <div class="hexagon hex3">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="d-block ms-lg-4 ms-2">
+                            <p class="fs-lg-5 fs-6 m-0">No. of Voters</p>
+                            <p>25,286,616</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="deadline mt-5 col-11 mx-auto">
+                    <ul class="d-md-flex">
+                        <li class="col-md-4">
+                            <p>Election Start Date</p>
+                            <p>14<sup>th</sup> Febuary, 2023</p>
+                        </li>
+                        <li class="col-md-4">
+                            <p>Election End Date</p>
+                            <p>14<sup>th</sup> October, 2023</p>
+                        </li>
+                        <li class="col-md-4">
+                            <p>Result Announcement</p>
+                            <p>14<sup>th</sup> November, 2023</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="spotlight mt-5">
+                    <h2 class="position-relative">Spotlight</h2>
+                    <div class="d-flex mt-5">
+                        <div class="spot bg-white pb-5">
+                            <div class="picture mx-auto col-6 mt-4 mb-5 d-block">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="w-100 rounded-circle">
+                            </div>
+                            <h5 class="text-center">Oladele Ezekiel</h5>
+                            <p class="text-center fs-6 m-0">Class Pressident</p>
+                            <p class="text-center fs-6">198273 votes</p>
+                            <div class="about-profile text-center text-white">
+                                <p>Sarah Johnson: Empowering students. Building a brighter future.</p>
+                            </div>
+                        </div>
+                        <div class="spot bg-white pb-5">
+                            <div class="picture mx-auto col-6 mt-4 mb-5 d-block">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="w-100 rounded-circle">
+                            </div>
+                            <h5 class="text-center">Oladele Ezekiel</h5>
+                            <p class="text-center fs-6 m-0">Class Pressident</p>
+                            <p class="text-center fs-6">196746 votes</p>
+                            <div class="about-profile text-center text-white">
+                                <p>Sarah Johnson: Empowering students. Building a brighter future.</p>
+                            </div>
+                        </div>
+                        <div class="spot bg-white pb-5">
+                            <div class="picture mx-auto col-6 mt-4 mb-5 d-block">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="w-100 rounded-circle">
+                            </div>
+                            <h5 class="text-center">Oladele Ezekiel</h5>
+                            <p class="text-center fs-6 m-0">Class Pressident</p>
+                            <p class="text-center fs-6">196742 votes</p>
+                            <div class="about-profile text-center text-white">
+                                <p>Sarah Johnson: Empowering students. Building a brighter future.</p>
+                            </div>
+                        </div>
+                        <div class="spot bg-white pb-5">
+                            <div class="picture mx-auto col-6 mt-4 mb-5 d-block">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="w-100 rounded-circle">
+                            </div>
+                            <h5 class="text-center">Oladele Ezekiel</h5>
+                            <p class="text-center fs-6 m-0">Class Pressident</p>
+                            <p class="text-center fs-6">196536 votes</p>
+                            <div class="about-profile text-center text-white">
+                                <p>Sarah Johnson: Empowering students. Building a brighter future.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="how mt-5">
+                    <h2 class="position-relative">How To Vote</h2>
+                    <ul class="mt-5 fs-5">
+                        <li>Log in to your student account using your credentials.</li>
+                        <li>Access the "Voting" section on the dashboard menu.</li>
+                        <li>Review the candidate profiles and their platforms.</li>
+                        <li>Select your preferred candidate for each position by clicking on the corresponding checkbox or button.</li>
+                        <li>Double-check your choices and make any necessary adjustments.</li>
+                        <li>Click the "Submit Vote" button to finalize your choices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="charts col-lg-11 col-10 p-3 ms-auto second-display">
+            <div class="how">
+                <h2 class="position-relative">How To Vote</h2>
+                <ul class="mt-5 fs-6">
+                    <li>Review the candidate profiles and their platforms.</li>
+                    <li>Select your preferred candidate for each position by clicking on the corresponding checkbox or button.</li>
+                    <li>Double-check your choices and make any necessary adjustments.</li>
+                    <li>Click the "Submit Vote" button to finalize your choices.</li>
+                </ul>
+            </div>
+            <div class="acc">
+                <h4 class=" mt-5">Candidates for Class President</h4>
+                <div class="d-block mt-4 col-11 mx-auto">
+                    <div class="d-flex p-2 align-items-center accord">
+                        <div class="col-1"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="rounded-circle" width="40px"></div>
+                        <h6 class="col-5">Oladele Ezekiel</h6>
+                        <h6 class="col-5">Inspiring Change, Building Unity</h6>
+                        <div class="col-1"><i class="fa-solid fa-chevron-down float-end"></i></div>
+                    </div>
+                    <div class="add-details bg-light">
+                        <p>Platform: John aims to enhance student engagement, promote inclusivity, and strengthen extracurricular activities. He plans to establish mentorship programs, organize student-led initiatives, and collaborate with teachers to implement innovative teaching methods.</p>
+                        <p>Qualifications: John is a dedicated student leader with a strong academic record. He has served as the Class Representative for two years, effectively representing his peers' interests and communicating their concerns to the administration. John has also been recognized for his community service involvement.</p>
+                        <p>Leadership Style: John is a collaborative leader who values active listening and empowering others. He believes in transparency, fostering a supportive environment, and promoting student voice and representation.</p>
+                        <p>Vision for the Role: As Student Council President, John envisions a student-centered approach to decision-making. He aims to create opportunities for student input, strengthen communication channels between students and administration, and address their needs and concerns.</p>
+                        <p>Engagement and Accessibility: John is committed to being accessible to all students. He plans to hold regular office hours, establish a student suggestion box, and utilize social media platforms for open communication and engagement.</p>
+                        <p>Endorsements: "John's dedication and passion for student advocacy are exemplary. He is a natural leader who genuinely cares about the well-being and success of his peers." - Ms. Johnson, Teacher</p>
+                    </div>
+                    <div class="d-flex p-2 align-items-center accord">
+                        <div class="col-1"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="rounded-circle" width="40px"></div>
+                        <h6 class="col-5">Oladele Ezekiel</h6>
+                        <h6 class="col-5">Inspiring Change, Building Unity</h6>
+                        <div class="col-1"><i class="fa-solid fa-chevron-down float-end"></i></div>
+                    </div>
+                    <div class="add-details bg-light">
+                        <p>Platform: John aims to enhance student engagement, promote inclusivity, and strengthen extracurricular activities. He plans to establish mentorship programs, organize student-led initiatives, and collaborate with teachers to implement innovative teaching methods.</p>
+                        <p>Qualifications: John is a dedicated student leader with a strong academic record. He has served as the Class Representative for two years, effectively representing his peers' interests and communicating their concerns to the administration. John has also been recognized for his community service involvement.</p>
+                        <p>Leadership Style: John is a collaborative leader who values active listening and empowering others. He believes in transparency, fostering a supportive environment, and promoting student voice and representation.</p>
+                        <p>Vision for the Role: As Student Council President, John envisions a student-centered approach to decision-making. He aims to create opportunities for student input, strengthen communication channels between students and administration, and address their needs and concerns.</p>
+                        <p>Engagement and Accessibility: John is committed to being accessible to all students. He plans to hold regular office hours, establish a student suggestion box, and utilize social media platforms for open communication and engagement.</p>
+                        <p>Endorsements: "John's dedication and passion for student advocacy are exemplary. He is a natural leader who genuinely cares about the well-being and success of his peers." - Ms. Johnson, Teacher</p>
+                    </div>
+                    <div class="d-flex p-2 align-items-center accord">
+                        <div class="col-1"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="rounded-circle" width="40px"></div>
+                        <h6 class="col-5">John Doe</h6>
+                        <h6 class="col-5">Inspiring Change, Building Unity</h6>
+                        <div class="col-1"><i class="fa-solid fa-chevron-down float-end"></i></div>
+                    </div>
+                    <div class="add-details bg-light">
+                        <p>Platform: John aims to enhance student engagement, promote inclusivity, and strengthen extracurricular activities. He plans to establish mentorship programs, organize student-led initiatives, and collaborate with teachers to implement innovative teaching methods.</p>
+                        <p>Qualifications: John is a dedicated student leader with a strong academic record. He has served as the Class Representative for two years, effectively representing his peers' interests and communicating their concerns to the administration. John has also been recognized for his community service involvement.</p>
+                        <p>Leadership Style: John is a collaborative leader who values active listening and empowering others. He believes in transparency, fostering a supportive environment, and promoting student voice and representation.</p>
+                        <p>Vision for the Role: As Student Council President, John envisions a student-centered approach to decision-making. He aims to create opportunities for student input, strengthen communication channels between students and administration, and address their needs and concerns.</p>
+                        <p>Engagement and Accessibility: John is committed to being accessible to all students. He plans to hold regular office hours, establish a student suggestion box, and utilize social media platforms for open communication and engagement.</p>
+                        <p>Endorsements: "John's dedication and passion for student advocacy are exemplary. He is a natural leader who genuinely cares about the well-being and success of his peers." - Ms. Johnson, Teacher</p>
+                    </div>
+                </div>
+                <h4 class=" mt-5">Candidates for Vice-President</h4>
+                <div class="d-block mt-4 col-11 mx-auto">
+                    <div class="d-flex p-2 align-items-center accord">
+                        <div class="col-1"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="rounded-circle" width="40px"></div>
+                        <h6 class="col-5">John Doe</h6>
+                        <h6 class="col-5">Inspiring Change, Building Unity</h6>
+                        <div class="col-1"><i class="fa-solid fa-chevron-down float-end"></i></div>
+                    </div>
+                    <div class="add-details bg-light">
+                        <p>Platform: John aims to enhance student engagement, promote inclusivity, and strengthen extracurricular activities. He plans to establish mentorship programs, organize student-led initiatives, and collaborate with teachers to implement innovative teaching methods.</p>
+                        <p>Qualifications: John is a dedicated student leader with a strong academic record. He has served as the Class Representative for two years, effectively representing his peers' interests and communicating their concerns to the administration. John has also been recognized for his community service involvement.</p>
+                        <p>Leadership Style: John is a collaborative leader who values active listening and empowering others. He believes in transparency, fostering a supportive environment, and promoting student voice and representation.</p>
+                        <p>Vision for the Role: As Student Council President, John envisions a student-centered approach to decision-making. He aims to create opportunities for student input, strengthen communication channels between students and administration, and address their needs and concerns.</p>
+                        <p>Engagement and Accessibility: John is committed to being accessible to all students. He plans to hold regular office hours, establish a student suggestion box, and utilize social media platforms for open communication and engagement.</p>
+                        <p>Endorsements: "John's dedication and passion for student advocacy are exemplary. He is a natural leader who genuinely cares about the well-being and success of his peers." - Ms. Johnson, Teacher</p>
+                    </div>
+                    <div class="d-flex p-2 align-items-center accord">
+                        <div class="col-1"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="rounded-circle" width="40px"></div>
+                        <h6 class="col-5">John Doe</h6>
+                        <h6 class="col-5">Inspiring Change, Building Unity</h6>
+                        <div class="col-1"><i class="fa-solid fa-chevron-down float-end"></i></div>
+                    </div>
+                    <div class="add-details bg-light">
+                        <p>Platform: John aims to enhance student engagement, promote inclusivity, and strengthen extracurricular activities. He plans to establish mentorship programs, organize student-led initiatives, and collaborate with teachers to implement innovative teaching methods.</p>
+                        <p>Qualifications: John is a dedicated student leader with a strong academic record. He has served as the Class Representative for two years, effectively representing his peers' interests and communicating their concerns to the administration. John has also been recognized for his community service involvement.</p>
+                        <p>Leadership Style: John is a collaborative leader who values active listening and empowering others. He believes in transparency, fostering a supportive environment, and promoting student voice and representation.</p>
+                        <p>Vision for the Role: As Student Council President, John envisions a student-centered approach to decision-making. He aims to create opportunities for student input, strengthen communication channels between students and administration, and address their needs and concerns.</p>
+                        <p>Engagement and Accessibility: John is committed to being accessible to all students. He plans to hold regular office hours, establish a student suggestion box, and utilize social media platforms for open communication and engagement.</p>
+                        <p>Endorsements: "John's dedication and passion for student advocacy are exemplary. He is a natural leader who genuinely cares about the well-being and success of his peers." - Ms. Johnson, Teacher</p>
+                    </div>
+                    <div class="d-flex p-2 align-items-center accord">
+                        <div class="col-1"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="rounded-circle" width="40px"></div>
+                        <h6 class="col-5">John Doe</h6>
+                        <h6 class="col-5">Inspiring Change, Building Unity</h6>
+                        <div class="col-1"><i class="fa-solid fa-chevron-down float-end"></i></div>
+                    </div>
+                    <div class="add-details bg-light">
+                        <p>Platform: John aims to enhance student engagement, promote inclusivity, and strengthen extracurricular activities. He plans to establish mentorship programs, organize student-led initiatives, and collaborate with teachers to implement innovative teaching methods.</p>
+                        <p>Qualifications: John is a dedicated student leader with a strong academic record. He has served as the Class Representative for two years, effectively representing his peers' interests and communicating their concerns to the administration. John has also been recognized for his community service involvement.</p>
+                        <p>Leadership Style: John is a collaborative leader who values active listening and empowering others. He believes in transparency, fostering a supportive environment, and promoting student voice and representation.</p>
+                        <p>Vision for the Role: As Student Council President, John envisions a student-centered approach to decision-making. He aims to create opportunities for student input, strengthen communication channels between students and administration, and address their needs and concerns.</p>
+                        <p>Engagement and Accessibility: John is committed to being accessible to all students. He plans to hold regular office hours, establish a student suggestion box, and utilize social media platforms for open communication and engagement.</p>
+                        <p>Endorsements: "John's dedication and passion for student advocacy are exemplary. He is a natural leader who genuinely cares about the well-being and success of his peers." - Ms. Johnson, Teacher</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="candidates col-lg-11 col-10 p-3 ms-auto second-display">
+            <div class="table-container">
+                <h4>Class President</h4>
+                <table class="col-12 mt-4">
+                    <tr>
+                        <th>Candidate Firstname</th>
+                        <th>Candidate Lastname</th>
+                        <th class="col-5">Votes</th>
+                        <th class="col-1"></th>
+                    </tr>
+                    <tr>
+                        <td>Oladele</td>
+                        <td>Ezekiel</td>
+                        <td>
+                            <div class="progress bg-white">
+                                <div class="progress-bar col-6">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="dl.beatsnoop.com-9IAHZ6Orjd__1_-removebg-preview.png" class="w-50 mx-auto" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Smith</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar col-4">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="dl.beatsnoop.com-9IAHZ6Orjd__2_-removebg-preview.png" class="w-50 mx-auto" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Smith</td>
+                        <td>
+                            <div class="progress bg-white">
+                                <div class="progress-bar col-2">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="dl.beatsnoop.com-9IAHZ6Orjd__3_-removebg-preview.png" class="w-50 mx-auto" alt="">
+                        </td>
+                    </tr>
+                </table>
+                <h4 class="mt-5">Vice Precident</h4>
+                <table class="col-12 mt-4">
+                    <tr>
+                        <th>Candidate Firstname</th>
+                        <th>Candidate Lastname</th>
+                        <th class="col-5">Votes</th>
+                        <th class="col-1"></th>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Smith</td>
+                        <td>
+                            <div class="progress bg-white">
+                                <div class="progress-bar col-5">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="dl.beatsnoop.com-9IAHZ6Orjd__1_-removebg-preview.png" class="w-50 mx-auto" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Smith</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar col-4">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="dl.beatsnoop.com-9IAHZ6Orjd__1_-removebg-preview.png" class="w-50 mx-auto" alt="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Smith</td>
+                        <td>
+                            <div class="progress bg-white">
+                                <div class="progress-bar col-3">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="dl.beatsnoop.com-9IAHZ6Orjd__1_-removebg-preview.png" class="w-50 mx-auto" alt="">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h4 class="mt-5">Deadline</h4>
+            <div class="d-flex deadline flex-wrap mt-4">
+                <div class="hours">
+                    <div class="days"></div>
+                    <p>Days</p>
+                </div>
+                <div class="hours">
+                    <div class="days"></div>
+                    <p>Hours</p>
+                </div>
+                <div class="hours">
+                    <div class="days"></div>
+                    <p>Mins</p>
+                </div>
+                <div class="hours">
+                    <div class="days"></div>
+                    <p>Secs</p>
+                </div>
+            </div>
+            <h4 class="mt-5">Voting Progress</h4>
+            <div class="d-lg-flex">
+                <div class="col-lg-6 col-12 mt-4 first-graph">
+                    <div class="col me-2 bg-white mx-auto p-4 president">
+                        <h2>Class President</h2>
+                        <canvas id="multi-chart" style="width:100%;"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 mt-4 first-graph">
+                    <div class="col ms-2 bg-white mx-auto p-4 president">
+                        <h2>Vice President</h2>
+                        <canvas id="multi-chart-scd" style="width:100%;max-width:100%"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="results col-lg-11 col-10 p-3 ms-auto second-display">
+            <!-- <div class="canvas final-result">
+                <div class="final-results">
+                    <canvas id="final-p-result" class="mx-md-auto" style="max-width: 80%;"></canvas>
+                </div>
+                <div class="final-results">
+                    <canvas id="final-g-result" class="mx-md-auto" style="max-width: 80%;"></canvas>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="chart.js"></script>
+</body>
+</html>
